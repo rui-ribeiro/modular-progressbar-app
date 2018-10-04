@@ -6,12 +6,21 @@ export const decrement = () => ({
     type: 'DECREMENT'
 });
 
+export const reset = () => ({
+    type: 'RESET'
+});
+
+
 export const incrementRequested = () => ({
     type: 'INCREMENT_REQUESTED'
 });
 
 export const decrementRequested = () => ({
     type: 'DECREMENT_REQUESTED'
+});
+
+export const resetRequested = () => ({
+    type: 'RESET_REQUESTED'
 });
 
 export const reachedMax = () => ({

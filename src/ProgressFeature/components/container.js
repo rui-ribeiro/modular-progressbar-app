@@ -1,6 +1,6 @@
 import {decrementRequested, incrementRequested} from "../modules/actions"
-import connect from "react-redux/es/connect/connect";
-import {MyProgressBar} from "./myProgressBar";
+import {connect} from "react-redux/es/";
+import Bar from "./bar";
 
 const mapStateToProps = (state) => ({
     percent: state.percent,
@@ -21,6 +21,6 @@ const mapDispatchToProps = dispatch => {
 const ProgressBarContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(MyProgressBar);
+)(Bar);
 
-export { ProgressBarContainer }
+export default ProgressBarContainer

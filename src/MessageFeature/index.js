@@ -1,11 +1,11 @@
 import {Message} from "semantic-ui-react";
 import React from "react";
 
-const RangeLimitError = (props) => (
+const ErrorContainer = (props) => (
     <Message negative>
         <Message.Header>Something went wrong</Message.Header>
-        <p>{props.error}</p>
+        <p>{props.message}</p>
     </Message>
 );
 
-export { RangeLimitError }
+export default { ErrorContainer }

@@ -4,13 +4,13 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
-import App1 from './components/App1';
-import App2 from './components/App2'
-import Home from './components/Home';
+import App1 from './App1';
+import App2 from './App2'
+import Home from './Home';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
-import {store} from './modules/store'
+import {store} from './ProgressFeature/modules/store'
 
 const BasicExample = () => (
     <Router>

@@ -1,6 +1,6 @@
 import {call, put, takeEvery, all} from 'redux-saga/effects'
-import API from '../client'
-import {increment, decrement, reachedMax, reachedMin} from './actions'
+import API from '../../client'
+import {increment, decrement, reachedMax, reachedMin, reset} from './actions'
 
 export function* incrementRequest() {
     try {
@@ -20,12 +20,22 @@ export function* decrementRequest() {
     }
 }
 
+
+export function* resetRequest() {
+        yield call(API.reset);
+        yield put(reset())
+}
+
 export function* watchIncrement() {
     yield takeEvery('INCREMENT_REQUESTED', incrementRequest)
 }
 
 export function* watchDecrement() {
     yield takeEvery('DECREMENT_REQUESTED', decrementRequest)
+}
+
+export function* watchReset() {
+    yield takeEvery('RESET_REQUESTED', resetRequest)
 }
 
 export default function* rootSaga() {

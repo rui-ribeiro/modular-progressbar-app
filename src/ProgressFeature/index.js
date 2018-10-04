@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {RangeLimitError} from './RangeLimitError'
-import {ProgressBarContainer} from './ProgressBarContainer'
-import {store} from '../modules/store'
+import ErrorContainer from '../MessageFeature/'
+import ProgressBarContainer from './components'
+import {store} from './modules/store'
 
-
-export default class App1 extends Component {
+export default class ProgressBarFeature extends Component {
     state = {
         error: ''
     };
@@ -20,10 +19,11 @@ export default class App1 extends Component {
     render() {
         return (
             <div>
-                {this.state.error && <RangeLimitError error={this.state.error}/>}
+                {this.state.error && <ErrorContainer message={this.state.error}/>}
                 <ProgressBarContainer/>
             </div>
         )
     }
 }
+
 

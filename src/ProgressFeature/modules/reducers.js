@@ -17,6 +17,9 @@ const actions = (state = {percent: INITIAL_PERCENT}, action) => {
         case 'DECREMENT':
             localStorage.setItem('percent', oldValue - 15);
             return {percent: oldValue - 15};
+        case 'RESET':
+            localStorage.setItem('percent', '0');
+            return {percent: 0};
         default:
             return state
     }
