@@ -4,7 +4,8 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
-import App from './components/App';
+import App1 from './components/App1';
+import App2 from './components/App2'
 import Home from './components/Home';
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
@@ -17,7 +18,8 @@ const BasicExample = () => (
             <div className="ui two column centered grid">
                 <div className="column">
                     <Link to='/'>Home </Link>
-                    <Route exact path='/app1' component={App}/>
+                    <Route exact path='/app1' component={App1}/>
+                    <Route exact path='/app2' component={App2}/>
                     <Route exact path="/" component={Home}/>
                 </div>
             </div>

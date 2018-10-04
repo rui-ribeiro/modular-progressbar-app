@@ -4,7 +4,7 @@ import {ProgressBarContainer} from './ProgressBarContainer'
 import {store} from '../modules/store'
 
 
-export default class App extends Component {
+export default class App1 extends Component {
     state = {
         error: ''
     };
