@@ -21,3 +21,9 @@ export const reachedMax = () => ({
 export const reachedMin = () => ({
     type: 'REACHED_MIN'
 });
+
+export const featureAdded = (featureName, featureId) => ({
+    type: 'FEATURE_ADDED',
+    featureName,
+    featureId
+});

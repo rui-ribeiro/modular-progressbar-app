@@ -12,7 +12,7 @@ export default {
             }, 300);
         })
     },
-    decrement: function(){
+    decrement: function () {
         return new Promise(function (resolve, reject) {
             setTimeout(function () {
                 const nextVal = parseInt(localStorage.getItem('percent')) - 15;
@@ -25,4 +25,5 @@ export default {
             }, 300);
         })
     }
+
 }
