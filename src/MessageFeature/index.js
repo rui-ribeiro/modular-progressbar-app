@@ -8,4 +8,4 @@ const ErrorContainer = (props) => (
     </Message>
 );
 
-export default { ErrorContainer }
+export default ErrorContainer
